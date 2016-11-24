@@ -1,4 +1,6 @@
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 
 //var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 let APP_DIR = path.resolve(__dirname, 'src/client/app');
@@ -16,7 +18,13 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [],
+  plugins: [
+    // Create HTML file that includes reference to bundled JS
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: true
+    }),
+  ],
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
