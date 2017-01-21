@@ -1,5 +1,5 @@
 /** This file contains references to the vendor libraries
- *  we're using in this project. This is used by webpack
+ *  we"re using in this project. This is used by webpack
  *  in the production build only*. A separate bundle for vendor
  *  code is useful since its unlikely to change as often
  *  as the applications code. So all the libraries we reference here will
@@ -12,4 +12,4 @@
  */
 /* eslint-disable no-unused-vars */
 
-import fetch from 'whatwg-fetch';
+import fetch from "whatwg-fetch";
